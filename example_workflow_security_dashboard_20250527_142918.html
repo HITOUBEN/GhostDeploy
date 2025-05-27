@@ -1,0 +1,80 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dashboard DevSecOps</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+                .container { max-width: 1200px; margin: 0 auto; }
+                .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+                .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
+                .stat-card { background: white; padding: 15px; border-radius: 5px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+                .stat-number { font-size: 2em; font-weight: bold; color: #3498db; }
+                .table-container { background: white; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+                table { width: 100%; border-collapse: collapse; }
+                th { background: #34495e; color: white; padding: 12px; text-align: left; }
+                td { padding: 10px; border-bottom: 1px solid #eee; }
+                .critical { background-color: #ffebee; }
+                .high { background-color: #fff3e0; }
+                .medium { background-color: #fffde7; }
+                .low { background-color: #e8f5e8; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>🔐 Dashboard DevSecOps</h1>
+                    <p>Rapport d'analyse de sécurité généré le 27/05/2025 à 14:29:18</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">85/100</div>
+                        <div>Score de Sécurité</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1</div>
+                        <div>Total Anomalies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">0</div>
+                        <div>Critiques</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1</div>
+                        <div>Élevées</div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sévérité</th>
+                                <th>Job</th>
+                                <th>Step</th>
+                                <th>Type</th>
+                                <th>Détail</th>
+                                <th>Recommandation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>test</td>
+                                <td>Run a suspicious script</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: http://malicious-site.com</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </body>
+        </html>
+        

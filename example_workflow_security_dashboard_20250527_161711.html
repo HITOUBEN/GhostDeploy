@@ -1,0 +1,548 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dashboard DevSecOps</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+                .container { max-width: 1200px; margin: 0 auto; }
+                .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+                .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
+                .stat-card { background: white; padding: 15px; border-radius: 5px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+                .stat-number { font-size: 2em; font-weight: bold; color: #3498db; }
+                .table-container { background: white; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+                table { width: 100%; border-collapse: collapse; }
+                th { background: #34495e; color: white; padding: 12px; text-align: left; }
+                td { padding: 10px; border-bottom: 1px solid #eee; }
+                .critical { background-color: #ffebee; }
+                .high { background-color: #fff3e0; }
+                .medium { background-color: #fffde7; }
+                .low { background-color: #e8f5e8; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>🔐 Dashboard DevSecOps</h1>
+                    <p>Rapport d'analyse de sécurité généré le 27/05/2025 à 16:17:11</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">0/100</div>
+                        <div>Score de Sécurité</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">53</div>
+                        <div>Total Anomalies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">21</div>
+                        <div>Critiques</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">23</div>
+                        <div>Élevées</div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sévérité</th>
+                                <th>Job</th>
+                                <th>Step</th>
+                                <th>Type</th>
+                                <th>Détail</th>
+                                <th>Recommandation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>dangerous_system_commands</td>
+                                <td>Dangerous file operations</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern dangerous_commands trouvé dans la commande</td>
+                                <td>Éviter les commandes système dangereuses, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>dangerous_system_commands</td>
+                                <td>Dangerous file operations</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern dangerous_commands trouvé dans la commande</td>
+                                <td>Éviter les commandes système dangereuses, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>dangerous_system_commands</td>
+                                <td>Dangerous file operations</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern dangerous_commands trouvé dans la commande</td>
+                                <td>Éviter les commandes système dangereuses, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>dangerous_system_commands</td>
+                                <td>System service manipulation</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern dangerous_commands trouvé dans la commande</td>
+                                <td>Éviter les commandes système dangereuses, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>dangerous_system_commands</td>
+                                <td>System service manipulation</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern dangerous_commands trouvé dans la commande</td>
+                                <td>Éviter les commandes système dangereuses, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Network reconnaissance</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern network_tools trouvé dans la commande</td>
+                                <td>Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Network reconnaissance</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern network_tools trouvé dans la commande</td>
+                                <td>Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Data exfiltration attempt</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern data_exfiltration trouvé dans la commande</td>
+                                <td>CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Data exfiltration attempt</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern data_exfiltration trouvé dans la commande</td>
+                                <td>CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Data exfiltration attempt</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern data_exfiltration trouvé dans la commande</td>
+                                <td>CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Data exfiltration attempt</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern data_exfiltration trouvé dans la commande</td>
+                                <td>CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Data exfiltration attempt</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: http://malicious-site.com/upload</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Data exfiltration attempt</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: http://attacker.com/collect</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Data exfiltration attempt</td>
+                                <td>Domaine suspect</td>
+                                <td>Domaine suspect détecté: pastebin.com</td>
+                                <td>Vérifier la légitimité de pastebin.com</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Download and execute suspicious script</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern network_tools trouvé dans la commande</td>
+                                <td>Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Download and execute suspicious script</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: http://malicious-domain.com/install.sh</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>network_and_exfiltration</td>
+                                <td>Download and execute suspicious script</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: https://192.168.1.100/backdoor.py</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>backdoors_and_persistence</td>
+                                <td>Create backdoor user</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern backdoors trouvé dans la commande</td>
+                                <td>CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>backdoors_and_persistence</td>
+                                <td>Install persistence mechanisms</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern network_tools trouvé dans la commande</td>
+                                <td>Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>backdoors_and_persistence</td>
+                                <td>Install persistence mechanisms</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern backdoors trouvé dans la commande</td>
+                                <td>CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>backdoors_and_persistence</td>
+                                <td>Install persistence mechanisms</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern backdoors trouvé dans la commande</td>
+                                <td>CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>backdoors_and_persistence</td>
+                                <td>Install persistence mechanisms</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern backdoors trouvé dans la commande</td>
+                                <td>CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>crypto_mining</td>
+                                <td>Download mining software</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern crypto_mining trouvé dans la commande</td>
+                                <td>CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>crypto_mining</td>
+                                <td>Configure mining</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern secrets trouvé dans la commande</td>
+                                <td>Utiliser GitHub Secrets pour stocker les informations sensibles</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>crypto_mining</td>
+                                <td>Configure mining</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern crypto_mining trouvé dans la commande</td>
+                                <td>CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>crypto_mining</td>
+                                <td>Configure mining</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern crypto_mining trouvé dans la commande</td>
+                                <td>CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>crypto_mining</td>
+                                <td>Configure mining</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern crypto_mining trouvé dans la commande</td>
+                                <td>CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>crypto_mining</td>
+                                <td>Configure mining</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern crypto_mining trouvé dans la commande</td>
+                                <td>CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>third_party_actions</td>
+                                <td>Use suspicious third-party action</td>
+                                <td>Action tierce</td>
+                                <td>Action tierce utilisée: suspicious-org/malicious-action@main</td>
+                                <td>Vérifier la réputation et épingler la version</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>third_party_actions</td>
+                                <td>Use suspicious third-party action</td>
+                                <td>Version non épinglée</td>
+                                <td>Action avec version flottante: suspicious-org/malicious-action@main</td>
+                                <td>Épingler à une version ou un hash spécifique</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>third_party_actions</td>
+                                <td>Use unversioned action</td>
+                                <td>Version non épinglée</td>
+                                <td>Action avec version flottante: actions/setup-node@latest</td>
+                                <td>Épingler à une version ou un hash spécifique</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>third_party_actions</td>
+                                <td>Use floating version</td>
+                                <td>Action tierce</td>
+                                <td>Action tierce utilisée: some-org/deploy-action@master</td>
+                                <td>Vérifier la réputation et épingler la version</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>third_party_actions</td>
+                                <td>Use floating version</td>
+                                <td>Version non épinglée</td>
+                                <td>Action avec version flottante: some-org/deploy-action@master</td>
+                                <td>Épingler à une version ou un hash spécifique</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>poor_secrets_management</td>
+                                <td>JWT token exposure</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern secrets trouvé dans la commande</td>
+                                <td>Utiliser GitHub Secrets pour stocker les informations sensibles</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>poor_secrets_management</td>
+                                <td>JWT token exposure</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern secrets trouvé dans la commande</td>
+                                <td>Utiliser GitHub Secrets pour stocker les informations sensibles</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>poor_secrets_management</td>
+                                <td>JWT token exposure</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern secrets trouvé dans la commande</td>
+                                <td>Utiliser GitHub Secrets pour stocker les informations sensibles</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>poor_secrets_management</td>
+                                <td>JWT token exposure</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern crypto_mining trouvé dans la commande</td>
+                                <td>CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>poor_secrets_management</td>
+                                <td>Private key exposure</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern secrets trouvé dans la commande</td>
+                                <td>Utiliser GitHub Secrets pour stocker les informations sensibles</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>poor_secrets_management</td>
+                                <td>Private key exposure</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern secrets trouvé dans la commande</td>
+                                <td>Utiliser GitHub Secrets pour stocker les informations sensibles</td>
+                            </tr>
+            
+                            <tr class="critical">
+                                <td>🔴 CRITIQUE</td>
+                                <td>poor_secrets_management</td>
+                                <td>Private key exposure</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern crypto_mining trouvé dans la commande</td>
+                                <td>CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>insecure_protocols</td>
+                                <td>HTTP downloads</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: http://insecure-site.com/sensitive-data.json</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>insecure_protocols</td>
+                                <td>HTTP downloads</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: http://192.168.1.50/malicious-payload.sh</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>reconnaissance_and_exploitation</td>
+                                <td>Security tools usage</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern reconnaissance trouvé dans la commande</td>
+                                <td>Limiter l'utilisation d'outils de reconnaissance à des fins légitimes</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>reconnaissance_and_exploitation</td>
+                                <td>SQL injection testing</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern reconnaissance trouvé dans la commande</td>
+                                <td>Limiter l'utilisation d'outils de reconnaissance à des fins légitimes</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>reconnaissance_and_exploitation</td>
+                                <td>SQL injection testing</td>
+                                <td>URL suspecte</td>
+                                <td>URL suspecte: http://target.com/login.php</td>
+                                <td>Vérifier la légitimité de l'URL</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>reconnaissance_and_exploitation</td>
+                                <td>Network scanning</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern network_tools trouvé dans la commande</td>
+                                <td>Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="medium">
+                                <td>🟡 MOYEN</td>
+                                <td>reconnaissance_and_exploitation</td>
+                                <td>Network scanning</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern reconnaissance trouvé dans la commande</td>
+                                <td>Limiter l'utilisation d'outils de reconnaissance à des fins légitimes</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>suspicious_domains</td>
+                                <td>Suspicious file sharing</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern network_tools trouvé dans la commande</td>
+                                <td>Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>suspicious_domains</td>
+                                <td>Suspicious file sharing</td>
+                                <td>Domaine suspect</td>
+                                <td>Domaine suspect détecté: transfer.sh</td>
+                                <td>Vérifier la légitimité de transfer.sh</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>suspicious_domains</td>
+                                <td>Suspicious file sharing</td>
+                                <td>Domaine suspect</td>
+                                <td>Domaine suspect détecté: pastebin.com</td>
+                                <td>Vérifier la légitimité de pastebin.com</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>suspicious_domains</td>
+                                <td>URL shorteners and trackers</td>
+                                <td>Domaine suspect</td>
+                                <td>Domaine suspect détecté: bit.ly</td>
+                                <td>Vérifier la légitimité de bit.ly</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>suspicious_domains</td>
+                                <td>URL shorteners and trackers</td>
+                                <td>Domaine suspect</td>
+                                <td>Domaine suspect détecté: tinyurl.com</td>
+                                <td>Vérifier la légitimité de tinyurl.com</td>
+                            </tr>
+            
+                            <tr class="high">
+                                <td>🟠 ÉLEVÉ</td>
+                                <td>suspicious_domains</td>
+                                <td>Crypto mining pools</td>
+                                <td>Commande suspecte détectée</td>
+                                <td>Pattern network_tools trouvé dans la commande</td>
+                                <td>Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées</td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </body>
+        </html>
+        

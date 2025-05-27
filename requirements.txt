@@ -1,0 +1,4 @@
+pyyaml          # Pour lire les fichiers .yml (workflows GitHub/GitLab)
+flask           # Pour créer le dashboard web plus tard
+rich            # Pour avoir un affichage stylé et lisible dans le terminal
+watchdog        # Pour surveiller les fichiers en temps réel (ex: nouveaux workflows)

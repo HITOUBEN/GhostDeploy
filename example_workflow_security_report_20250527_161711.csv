@@ -1,0 +1,74 @@
+=== RÉSUMÉ EXÉCUTIF ===
+Fichier analysé,example_workflow.yml
+Date d'analyse,27/05/2025 à 16:17:11
+Score de sécurité,0/100 (CRITIQUE)
+Niveau de risque,CRITIQUE
+Total anomalies,53
+
+=== RÉPARTITION PAR SÉVÉRITÉ ===
+HIGH,23
+CRITICAL,21
+MEDIUM,9
+
+=== TOP 5 CATÉGORIES PROBLÉMATIQUES ===
+Outils Réseau Suspects,7
+URLs Suspectes,7
+Cryptominage,7
+Secrets et Credentials,6
+Commandes Système Dangereuses,5
+
+=== DÉTAIL DES ANOMALIES ===
+ID,Sévérité,Job,Step,Type,Catégorie,Détail,Recommandation,CWE,CVE,Références
+1,🟠 ÉLEVÉ,dangerous_system_commands,Dangerous file operations,Commande suspecte détectée,Commandes Système Dangereuses,Pattern dangerous_commands trouvé dans la commande,"Éviter les commandes système dangereuses, utiliser des alternatives sécurisées",CWE-78,N/A,N/A
+2,🟠 ÉLEVÉ,dangerous_system_commands,Dangerous file operations,Commande suspecte détectée,Commandes Système Dangereuses,Pattern dangerous_commands trouvé dans la commande,"Éviter les commandes système dangereuses, utiliser des alternatives sécurisées",CWE-78,N/A,N/A
+3,🟠 ÉLEVÉ,dangerous_system_commands,Dangerous file operations,Commande suspecte détectée,Commandes Système Dangereuses,Pattern dangerous_commands trouvé dans la commande,"Éviter les commandes système dangereuses, utiliser des alternatives sécurisées",CWE-78,N/A,N/A
+4,🟠 ÉLEVÉ,dangerous_system_commands,System service manipulation,Commande suspecte détectée,Commandes Système Dangereuses,Pattern dangerous_commands trouvé dans la commande,"Éviter les commandes système dangereuses, utiliser des alternatives sécurisées",CWE-78,N/A,N/A
+5,🟠 ÉLEVÉ,dangerous_system_commands,System service manipulation,Commande suspecte détectée,Commandes Système Dangereuses,Pattern dangerous_commands trouvé dans la commande,"Éviter les commandes système dangereuses, utiliser des alternatives sécurisées",CWE-78,N/A,N/A
+6,🟠 ÉLEVÉ,network_and_exfiltration,Network reconnaissance,Commande suspecte détectée,Outils Réseau Suspects,Pattern network_tools trouvé dans la commande,"Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées",CWE-200,N/A,N/A
+7,🟠 ÉLEVÉ,network_and_exfiltration,Network reconnaissance,Commande suspecte détectée,Outils Réseau Suspects,Pattern network_tools trouvé dans la commande,"Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées",CWE-200,N/A,N/A
+8,🔴 CRITIQUE,network_and_exfiltration,Data exfiltration attempt,Commande suspecte détectée,Exfiltration de Données,Pattern data_exfiltration trouvé dans la commande,"CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données",CWE-200,N/A,N/A
+9,🔴 CRITIQUE,network_and_exfiltration,Data exfiltration attempt,Commande suspecte détectée,Exfiltration de Données,Pattern data_exfiltration trouvé dans la commande,"CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données",CWE-200,N/A,N/A
+10,🔴 CRITIQUE,network_and_exfiltration,Data exfiltration attempt,Commande suspecte détectée,Exfiltration de Données,Pattern data_exfiltration trouvé dans la commande,"CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données",CWE-200,N/A,N/A
+11,🔴 CRITIQUE,network_and_exfiltration,Data exfiltration attempt,Commande suspecte détectée,Exfiltration de Données,Pattern data_exfiltration trouvé dans la commande,"CRITIQUE: Examiner ces commandes, possibles tentatives d'exfiltration de données",CWE-200,N/A,N/A
+12,🟠 ÉLEVÉ,network_and_exfiltration,Data exfiltration attempt,URL suspecte,URLs Suspectes,URL suspecte: http://malicious-site.com/upload,Vérifier la légitimité de l'URL,N/A,N/A,N/A
+13,🟠 ÉLEVÉ,network_and_exfiltration,Data exfiltration attempt,URL suspecte,URLs Suspectes,URL suspecte: http://attacker.com/collect,Vérifier la légitimité de l'URL,N/A,N/A,N/A
+14,🟠 ÉLEVÉ,network_and_exfiltration,Data exfiltration attempt,Domaine suspect,Domaines Suspects,Domaine suspect détecté: pastebin.com,Vérifier la légitimité de pastebin.com,N/A,N/A,N/A
+15,🟠 ÉLEVÉ,network_and_exfiltration,Download and execute suspicious script,Commande suspecte détectée,Outils Réseau Suspects,Pattern network_tools trouvé dans la commande,"Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées",CWE-200,N/A,N/A
+16,🟠 ÉLEVÉ,network_and_exfiltration,Download and execute suspicious script,URL suspecte,URLs Suspectes,URL suspecte: http://malicious-domain.com/install.sh,Vérifier la légitimité de l'URL,N/A,N/A,N/A
+17,🟡 MOYEN,network_and_exfiltration,Download and execute suspicious script,URL suspecte,URLs Suspectes,URL suspecte: https://192.168.1.100/backdoor.py,Vérifier la légitimité de l'URL,N/A,N/A,N/A
+18,🔴 CRITIQUE,backdoors_and_persistence,Create backdoor user,Commande suspecte détectée,Backdoors et Persistance,Pattern backdoors trouvé dans la commande,"CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement",CWE-506,N/A,N/A
+19,🟠 ÉLEVÉ,backdoors_and_persistence,Install persistence mechanisms,Commande suspecte détectée,Outils Réseau Suspects,Pattern network_tools trouvé dans la commande,"Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées",CWE-200,N/A,N/A
+20,🔴 CRITIQUE,backdoors_and_persistence,Install persistence mechanisms,Commande suspecte détectée,Backdoors et Persistance,Pattern backdoors trouvé dans la commande,"CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement",CWE-506,N/A,N/A
+21,🔴 CRITIQUE,backdoors_and_persistence,Install persistence mechanisms,Commande suspecte détectée,Backdoors et Persistance,Pattern backdoors trouvé dans la commande,"CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement",CWE-506,N/A,N/A
+22,🔴 CRITIQUE,backdoors_and_persistence,Install persistence mechanisms,Commande suspecte détectée,Backdoors et Persistance,Pattern backdoors trouvé dans la commande,"CRITIQUE: Commandes de backdoor détectées, à supprimer immédiatement",CWE-506,N/A,N/A
+23,🔴 CRITIQUE,crypto_mining,Download mining software,Commande suspecte détectée,Cryptominage,Pattern crypto_mining trouvé dans la commande,"CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement",CWE-506,N/A,N/A
+24,🔴 CRITIQUE,crypto_mining,Configure mining,Commande suspecte détectée,Secrets et Credentials,Pattern secrets trouvé dans la commande,Utiliser GitHub Secrets pour stocker les informations sensibles,CWE-798,N/A,N/A
+25,🔴 CRITIQUE,crypto_mining,Configure mining,Commande suspecte détectée,Cryptominage,Pattern crypto_mining trouvé dans la commande,"CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement",CWE-506,N/A,N/A
+26,🔴 CRITIQUE,crypto_mining,Configure mining,Commande suspecte détectée,Cryptominage,Pattern crypto_mining trouvé dans la commande,"CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement",CWE-506,N/A,N/A
+27,🔴 CRITIQUE,crypto_mining,Configure mining,Commande suspecte détectée,Cryptominage,Pattern crypto_mining trouvé dans la commande,"CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement",CWE-506,N/A,N/A
+28,🔴 CRITIQUE,crypto_mining,Configure mining,Commande suspecte détectée,Cryptominage,Pattern crypto_mining trouvé dans la commande,"CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement",CWE-506,N/A,N/A
+29,🟡 MOYEN,third_party_actions,Use suspicious third-party action,Action tierce,Actions Tierces,Action tierce utilisée: suspicious-org/malicious-action@main,Vérifier la réputation et épingler la version,N/A,N/A,N/A
+30,🟡 MOYEN,third_party_actions,Use suspicious third-party action,Version non épinglée,Gestion des Versions,Action avec version flottante: suspicious-org/malicious-action@main,Épingler à une version ou un hash spécifique,N/A,N/A,N/A
+31,🟡 MOYEN,third_party_actions,Use unversioned action,Version non épinglée,Gestion des Versions,Action avec version flottante: actions/setup-node@latest,Épingler à une version ou un hash spécifique,N/A,N/A,N/A
+32,🟡 MOYEN,third_party_actions,Use floating version,Action tierce,Actions Tierces,Action tierce utilisée: some-org/deploy-action@master,Vérifier la réputation et épingler la version,N/A,N/A,N/A
+33,🟡 MOYEN,third_party_actions,Use floating version,Version non épinglée,Gestion des Versions,Action avec version flottante: some-org/deploy-action@master,Épingler à une version ou un hash spécifique,N/A,N/A,N/A
+34,🔴 CRITIQUE,poor_secrets_management,JWT token exposure,Commande suspecte détectée,Secrets et Credentials,Pattern secrets trouvé dans la commande,Utiliser GitHub Secrets pour stocker les informations sensibles,CWE-798,N/A,N/A
+35,🔴 CRITIQUE,poor_secrets_management,JWT token exposure,Commande suspecte détectée,Secrets et Credentials,Pattern secrets trouvé dans la commande,Utiliser GitHub Secrets pour stocker les informations sensibles,CWE-798,N/A,N/A
+36,🔴 CRITIQUE,poor_secrets_management,JWT token exposure,Commande suspecte détectée,Secrets et Credentials,Pattern secrets trouvé dans la commande,Utiliser GitHub Secrets pour stocker les informations sensibles,CWE-798,N/A,N/A
+37,🔴 CRITIQUE,poor_secrets_management,JWT token exposure,Commande suspecte détectée,Cryptominage,Pattern crypto_mining trouvé dans la commande,"CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement",CWE-506,N/A,N/A
+38,🔴 CRITIQUE,poor_secrets_management,Private key exposure,Commande suspecte détectée,Secrets et Credentials,Pattern secrets trouvé dans la commande,Utiliser GitHub Secrets pour stocker les informations sensibles,CWE-798,N/A,N/A
+39,🔴 CRITIQUE,poor_secrets_management,Private key exposure,Commande suspecte détectée,Secrets et Credentials,Pattern secrets trouvé dans la commande,Utiliser GitHub Secrets pour stocker les informations sensibles,CWE-798,N/A,N/A
+40,🔴 CRITIQUE,poor_secrets_management,Private key exposure,Commande suspecte détectée,Cryptominage,Pattern crypto_mining trouvé dans la commande,"CRITIQUE: Activité de cryptominage détectée, à supprimer immédiatement",CWE-506,N/A,N/A
+41,🟠 ÉLEVÉ,insecure_protocols,HTTP downloads,URL suspecte,URLs Suspectes,URL suspecte: http://insecure-site.com/sensitive-data.json,Vérifier la légitimité de l'URL,N/A,N/A,N/A
+42,🟠 ÉLEVÉ,insecure_protocols,HTTP downloads,URL suspecte,URLs Suspectes,URL suspecte: http://192.168.1.50/malicious-payload.sh,Vérifier la légitimité de l'URL,N/A,N/A,N/A
+43,🟡 MOYEN,reconnaissance_and_exploitation,Security tools usage,Commande suspecte détectée,Reconnaissance,Pattern reconnaissance trouvé dans la commande,Limiter l'utilisation d'outils de reconnaissance à des fins légitimes,CWE-200,N/A,N/A
+44,🟡 MOYEN,reconnaissance_and_exploitation,SQL injection testing,Commande suspecte détectée,Reconnaissance,Pattern reconnaissance trouvé dans la commande,Limiter l'utilisation d'outils de reconnaissance à des fins légitimes,CWE-200,N/A,N/A
+45,🟠 ÉLEVÉ,reconnaissance_and_exploitation,SQL injection testing,URL suspecte,URLs Suspectes,URL suspecte: http://target.com/login.php,Vérifier la légitimité de l'URL,N/A,N/A,N/A
+46,🟠 ÉLEVÉ,reconnaissance_and_exploitation,Network scanning,Commande suspecte détectée,Outils Réseau Suspects,Pattern network_tools trouvé dans la commande,"Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées",CWE-200,N/A,N/A
+47,🟡 MOYEN,reconnaissance_and_exploitation,Network scanning,Commande suspecte détectée,Reconnaissance,Pattern reconnaissance trouvé dans la commande,Limiter l'utilisation d'outils de reconnaissance à des fins légitimes,CWE-200,N/A,N/A
+48,🟠 ÉLEVÉ,suspicious_domains,Suspicious file sharing,Commande suspecte détectée,Outils Réseau Suspects,Pattern network_tools trouvé dans la commande,"Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées",CWE-200,N/A,N/A
+49,🟠 ÉLEVÉ,suspicious_domains,Suspicious file sharing,Domaine suspect,Domaines Suspects,Domaine suspect détecté: transfer.sh,Vérifier la légitimité de transfer.sh,N/A,N/A,N/A
+50,🟠 ÉLEVÉ,suspicious_domains,Suspicious file sharing,Domaine suspect,Domaines Suspects,Domaine suspect détecté: pastebin.com,Vérifier la légitimité de pastebin.com,N/A,N/A,N/A
+51,🟠 ÉLEVÉ,suspicious_domains,URL shorteners and trackers,Domaine suspect,Domaines Suspects,Domaine suspect détecté: bit.ly,Vérifier la légitimité de bit.ly,N/A,N/A,N/A
+52,🟠 ÉLEVÉ,suspicious_domains,URL shorteners and trackers,Domaine suspect,Domaines Suspects,Domaine suspect détecté: tinyurl.com,Vérifier la légitimité de tinyurl.com,N/A,N/A,N/A
+53,🟠 ÉLEVÉ,suspicious_domains,Crypto mining pools,Commande suspecte détectée,Outils Réseau Suspects,Pattern network_tools trouvé dans la commande,"Éviter les outils réseau non essentiels, utiliser des alternatives sécurisées",CWE-200,N/A,N/A

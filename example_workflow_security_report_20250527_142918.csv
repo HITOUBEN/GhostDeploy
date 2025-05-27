@@ -1,0 +1,16 @@
+=== RÉSUMÉ EXÉCUTIF ===
+Fichier analysé,example_workflow.yml
+Date d'analyse,27/05/2025 à 14:29:18
+Score de sécurité,85/100 (BON)
+Niveau de risque,FAIBLE
+Total anomalies,1
+
+=== RÉPARTITION PAR SÉVÉRITÉ ===
+HIGH,1
+
+=== TOP 5 CATÉGORIES PROBLÉMATIQUES ===
+URLs Suspectes,1
+
+=== DÉTAIL DES ANOMALIES ===
+ID,Sévérité,Job,Step,Type,Catégorie,Détail,Recommandation,CWE,CVE,Références
+1,🟠 ÉLEVÉ,test,Run a suspicious script,URL suspecte,URLs Suspectes,URL suspecte: http://malicious-site.com,Vérifier la légitimité de l'URL,N/A,N/A,N/A
