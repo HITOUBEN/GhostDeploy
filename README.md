@@ -283,7 +283,7 @@ Les contributions sont bienvenues ! Le projet suit les standards de développeme
 
 ## 👥 Équipe
 
-- **Ahmed (HITOUBEN)** - *Développeur Principal & Architecte Sécurité* - [@HITOUBEN](https://github.com/HITOUBEN)
+- **Ahmed (HITOUBEN)** - *Développeur Principal* - [@HITOUBEN](https://github.com/HITOUBEN)
 
 ## 📄 Licence
 
